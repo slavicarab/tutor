@@ -3,14 +3,15 @@ package models
 import "gorm.io/gorm"
 
 type Users struct {
-	ID          uint   `json:"id" sql:"AUTO_INCREMENT" gorm:"primaryKey"`
-	UserName    string `json:"userName"`
-	UserClass   string `json:"userClass"`
-	UserAddress string `json:"userAddress"`
-	UserNumber  string `json:"userNumber"`
-	UserEmail   string `json:"userEmail"`
-	UserCourse  string `json:"userCourse"`
-	UserStatus  bool   `json:"userStatus"`
+	ID           uint          `json:"id" sql:"AUTO_INCREMENT" gorm:"primaryKey"`
+	UserName     string        `json:"userName"`
+	UserClass    string        `json:"userClass"`
+	UserAddress  string        `json:"userAddress"`
+	UserNumber   string        `json:"userNumber"`
+	UserEmail    string        `json:"userEmail"`
+	UserCourse   string        `json:"userCourse"`
+	UserStatus   bool          `json:"userStatus"`
+	Appointments []Appointment `json:"appointments" gorm:"foreignKey:UserID;constraint:OnDelete:CASCADE"`
 }
 
 // Save saves the user instance to the database

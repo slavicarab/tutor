@@ -18,7 +18,7 @@ func InitDB() *gorm.DB {
 	}
 
 	// Migrate models
-	db.AutoMigrate(&models.Users{})
+	db.AutoMigrate(&models.Users{}, &models.Appointment{})
 	log.Println("Database connection established and models migrated")
 	return db
 }

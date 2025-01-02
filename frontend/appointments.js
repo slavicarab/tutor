@@ -58,11 +58,13 @@ function renderCalendar(date) {
             month === today.getMonth() &&
             year === today.getFullYear();
         if (isCurrentDay) {
-            calendarGrid.innerHTML += `<div class='current-day'>${day}</div>`;
+            calendarGrid.innerHTML += `<div class='current-day day-format'>${day}
+            <div class='day-content'></div></div>`
+           
         } else if (isA) {
-            calendarGrid.innerHTML += `<div class='a-day hover-container'>${day}<div class="hover-text">${isTime} - ${isUser}</div></div>`;
+            calendarGrid.innerHTML += `<div class='a-day hover-container day-format'>${day}<div class="hover-text">${isTime} - ${isUser}</div></div>`;
         } else {
-            calendarGrid.innerHTML += `<div>${day}</div>`;
+            calendarGrid.innerHTML += `<div class='day-format'>${day}</div>`;
         }
         
     }

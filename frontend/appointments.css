@@ -1,5 +1,5 @@
 .calendar {
-  width: 350px;
+  width: 100%;
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -10,9 +10,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: #0078d7;
-  color: white;
+  background:  #bd577e;
+  color: #f9f9f9;
   border-radius: 8px 8px 0 0;
+  font-family: 'Satisfy', cursive;
 }
 .calendar-header h3 {
   margin: 0;
@@ -42,8 +43,8 @@
   border-radius: 4px;
 }
 .calendar-grid div:hover {
-  background: #0078d7;
-  color: white;
+  background:  #bd577e;
+  color: antiquewhite;
   cursor: pointer;
 }
 .current-day {
@@ -142,3 +143,29 @@ body{
 .hover-container:hover .hover-text {
   visibility: visible;
 }
+
+.month{
+height: 2rem;
+border: 1px solid #bd577e;
+border-radius: 8px;
+font-family: 'Satisfy', cursive;
+padding-left: 5px;
+padding-right: 5px;
+background-color:#f9f9f9;
+font-weight: 600;
+color:  #bd577e;
+}
+
+.empty{
+  color: rgb(170, 165, 165);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.day-format{
+  height: 100px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+

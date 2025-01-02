@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Playwrite+SK+Guides&family=Satisfy&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="topnav">
+        <a href="#home" class="active">Tutor Notebook</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="listusers.html">List Users</a>
+          <a href="adduser.html">Add user</a>
+          <a href="calender">Calender</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <form class="tutorForm" id="tutorForm">
+          <input type="text" id="name" placeholder="name" required />
+          <input type="text" id="class" placeholder="class" required />
+          <input type="text" id="address" placeholder="address" required />
+          <input
+            type="text"
+            id="phoneNumber"
+            placeholder="phone number"
+            required
+          />
+          <input type="text" id="email" placeholder="e-mail address" required />
+          <div class="course">
+            <label for="cars">Choose a course:</label><br />
+            <select name="course" id="course">
+              <option value="more">More</option>
+              <option value="primetime">Prime Time</option>
+              <option value="bestshots">Best Shots</option>
+              <option value="marketleader">Market Leader</option>
+            </select>
+          </div>
+          <div class="statusLabel">
+            <label for="status">Status:</label>
+          </div>
+          <div id="">
+            <input
+              type="radio"
+              id="statusA"
+              name="status"
+              value="true"
+              checked
+            />
+            <label for="active">Active</label>
+          </div>
+
+          <div id="">
+            <input type="radio" id="statusI" name="status" value="false" />
+            <label for="inactive">Inactive</label>
+          </div>
+
+          <button id="save">save</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="adduser.js"></script>
+  </body>
+</html>

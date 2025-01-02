@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Playwrite+SK+Guides&family=Satisfy&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="topnav">
+        <a href="#home" class="active">Tutor Notebook</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="listusers.html">List Users</a>
+          <a href="adduser.html">Add user</a>
+          <a href="calenderadd.html">Calender</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <form class="tutorForm" id="tutorForm">
+          <input type="date" id="date" placeholder="date" required />
+          <input type="time" id="time" placeholder="time" required />
+        </form>
+
+        <label for="students">Choose a student:</label><br />
+        <select name="student" id="student"></select>
+
+        <button id="save">save</button>
+      </div>
+    </main>
+
+    <script src="calenderadd.js"></script>
+  </body>
+</html>

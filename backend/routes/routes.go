@@ -16,4 +16,8 @@ func RegisterRoutes(r *mux.Router, db *gorm.DB) {
 
 	r.HandleFunc("/appointment", handlers.GetAppointments(db)).Methods("GET")
 	r.HandleFunc("/appointment", handlers.CreateAppointment(db)).Methods("POST")
+	r.HandleFunc("/appointment/{id:[0-9]+}", handlers.UpdateAppointment(db)).Methods("PUT")
+	r.HandleFunc("/appointment/date/{date}", handlers.GetAppointmentsByDate(db)).Methods("GET")
+	r.HandleFunc("/appointment/{id:[0-9]+}", handlers.GetAppointmentByID(db)).Methods("GET")
+	r.HandleFunc("/appointment/{id:[0-9]+}", handlers.DeleteAppointmentByID(db)).Methods("DELETE")
 }
